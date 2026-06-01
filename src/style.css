@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f9f6f1;
+  --paper-strong: #fffaf2;
+  --surface: #ffffff;
+  --ink: #2f2a24;
+  --ink-strong: #241f1a;
+  --muted: #6b6257;
+  --border: #e6dfd3;
+  --accent: #b4632b;
+  --accent-strong: #8c4a1d;
+  --accent-soft: #f3e3d2;
+}
+
+@layer base {
+  * {
+    @apply scroll-smooth;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl font-bold tracking-tight;
+    color: var(--ink-strong);
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl font-semibold tracking-tight;
+    color: var(--ink-strong);
+  }
+
+  p {
+    color: var(--muted);
+  }
+
+  a {
+    color: var(--ink);
+    @apply transition-colors;
+  }
+}
+
+@layer components {
+  .nav-shell {
+    background: rgba(249, 246, 241, 0.92);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-link {
+    @apply text-sm font-medium tracking-wide transition-colors;
+    color: var(--ink);
+  }
+
+  .nav-link:hover {
+    color: var(--accent-strong);
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-lg font-medium transition-colors;
+    background: var(--accent);
+    color: #fffdf8;
+  }
+
+  .btn-primary:hover {
+    background: var(--accent-strong);
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-lg font-medium transition-colors;
+    border: 1px solid var(--border);
+    color: var(--ink);
+    background: transparent;
+  }
+
+  .btn-secondary:hover {
+    background: var(--accent-soft);
+  }
+
+  .btn-icon {
+    @apply w-10 h-10 rounded-full flex items-center justify-center transition-colors;
+    border: 1px solid var(--border);
+    color: var(--ink);
+  }
+
+  .btn-icon:hover {
+    background: var(--accent-soft);
+  }
+
+  .section-container {
+    @apply max-w-5xl mx-auto px-6 py-16 md:py-24;
+  }
+
+  .section-divider {
+    border-top: 1px solid var(--border);
+  }
+
+  .muted {
+    color: var(--muted);
+  }
+
+  .tag {
+    @apply px-3 py-1 rounded-full text-xs font-medium;
+    background: var(--accent-soft);
+    color: var(--ink);
+  }
+
+  .project-card {
+    @apply rounded-xl p-6 md:p-8 transition-shadow;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 24px rgba(47, 42, 36, 0.06);
+  }
+
+  .project-card:hover {
+    box-shadow: 0 16px 32px rgba(47, 42, 36, 0.12);
+  }
+
+  .footer-shell {
+    background: var(--paper-strong);
+    border-top: 1px solid var(--border);
+  }
+
+  .project-shot {
+    @apply rounded-lg flex items-center justify-center text-sm font-medium;
+    background: var(--accent-soft);
+    color: var(--ink);
+    border: 1px dashed var(--border);
+    min-height: 180px;
+  }
+}
+
+  &::before {
+    left: 0;
+    border-left-color: var(--border);
+  }
+  &::after {
+    right: 0;
+    border-right-color: var(--border);
+  }
+
