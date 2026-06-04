@@ -1,18 +1,22 @@
 import { motion } from 'framer-motion';
 import hiremitra from '../assets/hiremitra.png';
 import crypt from '../assets/crypt.png';
+import db_tool from '../assets/db_tool.png';
 
 const projects = [
   {
     title: 'Database Backup Utility',
     description: 'Cross-database CLI tool for PostgreSQL and MongoDB supporting backup, restore, connection testing, and configuration management.',
     features: [
-      'Backup and restore workflows with validation checks',
-      'Compressed backups and automated recovery support',
-      'Safe restore mechanism with temporary databases and rollback support',
-      'Structured logging and retry mechanisms',
+      'Backup and restore with validation checks',
+      'Compressed backups and recovery support',
+      'Safe restores with rollback protection',
+      'Structured logging and retry handling',
+      'AWS S3 uploads and email notifications',
+      'Automated scheduling with cron jobs'
     ],
-    tech: ['Node.js', 'PostgreSQL', 'MongoDB', 'Winston', 'Inquirer'],
+    img: db_tool,
+    tech: ['Node.js', 'PostgreSQL', 'MongoDB', 'Winston', 'AWS SDK'],
     github: 'https://github.com/GR4V1TY123/Penguin_Backup_Tool',
   },
   {
